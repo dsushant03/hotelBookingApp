@@ -1,8 +1,6 @@
 import{Route, Routes} from 'react-router-dom'
 import React, {lazy, Suspense} from 'react'
-import LoadingSkeleton from './components/LoadingSkeleton'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import ProtectedRoutes from './components/ProtectedRoutes'
 
 const Login = lazy(()=>import('./pages/Login'))
 const NotFound = lazy(()=>import('./pages/NotFound'))
@@ -10,6 +8,9 @@ const Home = lazy(()=>import('./pages/Home'))
 const HotelInfo = lazy(()=>import('./pages/HotelInfo'))
 const Signup = lazy(()=>import('./pages/Signup'))
 const Profile = lazy(()=>import('./pages/Profile'))
+const ProtectedRoutes = lazy(()=>import('./components/ProtectedRoutes'))
+const LoadingSkeleton = lazy(()=>import('./components/LoadingSkeleton'))
+
 
 const qClient = new QueryClient();
 

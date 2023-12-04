@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { AppBar, 
         Avatar,
         Box, 
@@ -18,7 +18,6 @@ import PersonIcon from '@mui/icons-material/Person';
 import { useNavigate } from 'react-router-dom'
 import { useFirebase } from '../context/Firebase';
 import { signOut } from 'firebase/auth';
-import Profile from '../pages/Profile';
 
 
 function Navbar({hotels, setHotels, originalHotels, loggedIn}) {

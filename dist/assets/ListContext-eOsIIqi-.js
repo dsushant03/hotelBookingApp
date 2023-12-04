@@ -1,0 +1,1 @@
+import{r as i}from"./index-t1rrV4Sx.js";function r(e,o){var n,t;return i.isValidElement(e)&&o.indexOf((n=e.type.muiName)!=null?n:(t=e.type)==null||(t=t._payload)==null||(t=t.value)==null?void 0:t.muiName)!==-1}function u(e){return typeof e=="string"}const a=i.createContext({}),l=a;export{l as L,u as a,r as i};

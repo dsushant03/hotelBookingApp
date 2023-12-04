@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { getHotels } from '../api/request'
 import {useQuery} from 'react-query'
-import LoadingSkeleton from '../components/LoadingSkeleton'
-import Navbar from '../components/Navbar'
-import HotelCard from '../components/HotelCard'
 import { Container, Grid, Pagination } from '@mui/material'
+import { lazy } from 'react'
+
+const Navbar = lazy(()=>import('../components/Navbar'))
+const LoadingSkeleton = lazy(()=>import('../components/LoadingSkeleton'))
+const HotelCard = lazy(()=>import('../components/HotelCard'))
 
 function Home() {
 

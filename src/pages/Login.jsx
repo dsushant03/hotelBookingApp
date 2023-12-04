@@ -1,9 +1,11 @@
 import React from 'react'
 import { useFirebase } from '../context/Firebase'
-import { useState, useContext } from 'react';
-import Navbar from '../components/Navbar';
+import { useState } from 'react';
+import { lazy } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { Box, Button, Modal, TextField, Typography} from '@mui/material';
+import { Box, Button, TextField, Typography} from '@mui/material';
+
+const Navbar = lazy(()=>import('../components/Navbar'))
 
 function Login() {
   const firebase = useFirebase();

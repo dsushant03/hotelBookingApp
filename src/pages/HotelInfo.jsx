@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useQuery } from 'react-query';
-import Navbar from '../components/Navbar';
+import { lazy } from 'react'
 import { getHotelBySlug } from '../api/request';
 import { Box, Button, Container, ListItem, Typography } from '@mui/material';
-import LoadingSkeleton from '../components/LoadingSkeleton';
 import Gallary from '../components/Gallary';
-import BookingModal from '../components/BookingModal';
+
+const Navbar = lazy(()=>import('../components/Navbar'))
+const LoadingSkeleton = lazy(()=>import('../components/LoadingSkeleton'))
+const BookingModal = lazy(()=>import('../components/BookingModal'))
 
 function HotelInfo() {
     const {slug} = useParams();
@@ -19,7 +21,7 @@ function HotelInfo() {
 
     const{isLoading, data} = useQuery('hotelData', fetchHotelInfo);
 
-     const handleOpen = ()=>{setOpen(true)};
+    const handleOpen = ()=>{setOpen(true)};
      
   return (
     <>

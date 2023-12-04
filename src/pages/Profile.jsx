@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useFirebase } from '../context/Firebase'
+import { lazy } from 'react'
 import { Paper, Table, TableBody, TableCell, TableRow, TableHead, TableContainer, Typography, Box } from '@mui/material';
-import Navbar from '../components/Navbar';
+
+const Navbar = lazy(()=>import('../components/Navbar'))
 
 
 function Profile() {
